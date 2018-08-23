@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mini?charset=utf8mb4&serverTimezone=UTC
+    username: root
+    password: root
+    tomcat.max-active: 20
+    tomcat.test-while-idle: true
+    tomcat.validation-query: select 1
+    tomcat.default-auto-commit: false
+    tomcat.min-idle: 15
+    tomcat.initial-size: 15
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+
+mybatis:
+  typeAliasesPackage: com.xdd.entity
+  mapperLocations: classpath:mapper/*.xml
+
+server:
+  port: 8080
